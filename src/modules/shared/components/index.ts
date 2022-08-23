@@ -1,0 +1,7 @@
+export * from './header/header.component'
+export * from './footer/footer.component'
+export * from './nav/nav.component'
+export * from './home-banner/home-banner.component'
+export * from './rating-reviews/rating-reviews.component'
+export * from './faqs/faqs.component'
+export * from './keywords/keywords.component'
