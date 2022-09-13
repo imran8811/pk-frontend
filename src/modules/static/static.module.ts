@@ -2,7 +2,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HomeRoutingModule } from './static-routing.module';
+import { StaticRoutingModule } from './static-routing.module';
 import { SharedModule } from '../shared/shared.module';
 
 import {
@@ -11,7 +11,8 @@ import {
   FactoryComponent,
   ContactComponent,
   CertificationsComponent,
-  BlogComponent
+  BlogComponent,
+  BlogPostComponent
 } from './components';
 
 @NgModule({
@@ -21,14 +22,15 @@ import {
     FactoryComponent,
     ContactComponent,
     CertificationsComponent,
-    BlogComponent
+    BlogComponent,
+    BlogPostComponent
   ],
   imports: [
     RouterModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    HomeRoutingModule,
+    StaticRoutingModule,
     SharedModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

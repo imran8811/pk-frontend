@@ -11,7 +11,8 @@ import {
   HomeBannerComponent,
   RatingReviewsComponent,
   FAQsComponent,
-  KeywordsComponent
+  KeywordsComponent,
+  ProductFiltersComponent
 } from './components';
 
 @NgModule({
@@ -22,7 +23,8 @@ import {
     HomeBannerComponent,
     RatingReviewsComponent,
     FAQsComponent,
-    KeywordsComponent
+    KeywordsComponent,
+    ProductFiltersComponent
   ],
   exports :[
     HeaderComponent,
@@ -31,7 +33,8 @@ import {
     HomeBannerComponent,
     RatingReviewsComponent,
     FAQsComponent,
-    KeywordsComponent
+    KeywordsComponent,
+    ProductFiltersComponent
   ],
   imports: [
     RouterModule,

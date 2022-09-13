@@ -1,0 +1,11 @@
+<div class="row">
+  <h2 class="text-center mb-5">
+    <span class="text-capitalize">{{category}}</span> Hot Selling <span class="text-capitalize">{{type}}</span>
+  </h2>
+  <div class="col-lg-3 mb-3" *ngFor="let product of productListing">
+    <a routerLink="/wholesale-shop" class="d-block mb-3" target="_blank" rel="noreferrer">
+      <img src={{product.product_images.path}} alt={{product.product_images.path}} height="370" class="img" />
+    </a>
+    <a routerLink="/wholesale-shop" class="d-block text-center">Article# {{product.article_no}}</a>
+  </div>
+</div>
