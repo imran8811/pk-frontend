@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { LandingPagesRoutingModule } from './landing-pages-routing.module';
+import { MenLandingPagesRoutingModule } from './men-landing-pages-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { LANDING_PAGES_COMPONENTS } from './components';
 
@@ -11,10 +11,10 @@ import { LANDING_PAGES_COMPONENTS } from './components';
   imports: [
     RouterModule,
     CommonModule,
-    LandingPagesRoutingModule,
+    MenLandingPagesRoutingModule,
     SharedModule,
     HttpClientModule
   ]
 })
 
-export class LandingPagesModule { }
+export class MenLandingPagesModule { }

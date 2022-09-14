@@ -8,7 +8,11 @@ const routes: Routes = [
   },
   {
     path: 'men',
-    loadChildren: () => import('../modules/landing-pages/landing-pages.module').then(module => module.LandingPagesModule),
+    loadChildren: () => import('../modules/men-landing-pages/men-landing-pages.module').then(module => module.MenLandingPagesModule),
+  },
+  {
+    path: 'women',
+    loadChildren: () => import('../modules/women-landing-pages/women-landing-pages.module').then(module => module.WomenLandingPagesModule),
   },
   {
     path: 'admin',

@@ -38,4 +38,4 @@ const routes: Routes = [
   ]
 })
 
-export class LandingPagesRoutingModule {}
+export class MenLandingPagesRoutingModule {}
