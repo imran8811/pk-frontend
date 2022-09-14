@@ -9,7 +9,10 @@ import {
   JeansManufacturingCostComponent,
   JeansPantsManufacturersComponent,
   JeansWholesaleComponent,
-  KevlarJeansManufacturersComponent
+  KevlarJeansManufacturersComponent,
+  WholesaleDenimJeansSuppliersComponent,
+  WholesaleJeansManufacturersComponent,
+  WholesaleJeansBulkComponent
 } from './components';
 
 const routes: Routes = [
@@ -21,6 +24,9 @@ const routes: Routes = [
   { path: 'jeans-pants/jeans-pants-manufacturers', component: JeansPantsManufacturersComponent },
   { path: 'jeans-pants/jeans-wholesale', component: JeansWholesaleComponent },
   { path: 'jeans-pants/kevlar-jeans-manufacturers', component: KevlarJeansManufacturersComponent },
+  { path: 'jeans-pants/wholesale-denim-jeans-suppliers', component: WholesaleDenimJeansSuppliersComponent },
+  { path: 'jeans-pants/wholesale-jeans-manufacturers', component: WholesaleJeansManufacturersComponent },
+  { path: 'jeans-pants/wholesale-jeans-bulk', component: WholesaleJeansBulkComponent },
 ];
 
 @NgModule({

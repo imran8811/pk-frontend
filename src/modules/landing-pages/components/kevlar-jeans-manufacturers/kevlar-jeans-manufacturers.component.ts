@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class KevlarJeansManufacturersComponent implements OnInit {
-  headingText = 'Jeans Wholesale'
-  paraText = 'Best Jeans Wholesale'
+  headingText = 'Kevlar Jeans Manufacturers'
+  paraText = 'Best Kevlar Jeans Manufacturers'
   category = 'men'
   type = 'jeans-pant'
   numberOfRecords = '6'

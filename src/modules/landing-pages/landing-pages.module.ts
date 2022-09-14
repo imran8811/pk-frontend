@@ -4,29 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { LandingPagesRoutingModule } from './landing-pages-routing.module';
 import { SharedModule } from '../shared/shared.module';
-
-import {
-  BulkJeansComponent,
-  DenimManufacturersComponent,
-  JeanManufacturersComponent,
-  JeansManufacturersComponent,
-  JeansManufacturingCostComponent,
-  JeansPantsManufacturersComponent,
-  JeansWholesaleComponent,
-  KevlarJeansManufacturersComponent
-} from './components';
+import { LANDING_PAGES_COMPONENTS } from './components';
 
 @NgModule({
-  declarations: [
-    BulkJeansComponent,
-    DenimManufacturersComponent,
-    JeanManufacturersComponent,
-    JeansManufacturersComponent,
-    JeansManufacturingCostComponent,
-    JeansPantsManufacturersComponent,
-    JeansWholesaleComponent,
-    KevlarJeansManufacturersComponent
-  ],
+  declarations: LANDING_PAGES_COMPONENTS,
   imports: [
     RouterModule,
     CommonModule,
