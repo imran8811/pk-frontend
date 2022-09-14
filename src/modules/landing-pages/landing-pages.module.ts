@@ -7,19 +7,25 @@ import { SharedModule } from '../shared/shared.module';
 
 import {
   BulkJeansComponent,
-  TaglineComponent,
-  ProductListingComponent,
   DenimManufacturersComponent,
-  JeanManufacturersComponent
+  JeanManufacturersComponent,
+  JeansManufacturersComponent,
+  JeansManufacturingCostComponent,
+  JeansPantsManufacturersComponent,
+  JeansWholesaleComponent,
+  KevlarJeansManufacturersComponent
 } from './components';
 
 @NgModule({
   declarations: [
     BulkJeansComponent,
-    TaglineComponent,
-    ProductListingComponent,
     DenimManufacturersComponent,
-    JeanManufacturersComponent
+    JeanManufacturersComponent,
+    JeansManufacturersComponent,
+    JeansManufacturingCostComponent,
+    JeansPantsManufacturersComponent,
+    JeansWholesaleComponent,
+    KevlarJeansManufacturersComponent
   ],
   imports: [
     RouterModule,

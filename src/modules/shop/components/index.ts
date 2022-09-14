@@ -1,2 +1,2 @@
-export * from './product-listing/product-listing.component'
+export * from './shop-listing/shop-listing.component'
 export * from './product-details/product-details.component'

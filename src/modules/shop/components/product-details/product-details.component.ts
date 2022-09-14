@@ -12,15 +12,17 @@ import { ProductService } from 'src/services';
 export class ProductDetailsComponent implements OnInit {
   BASE_PATH = basePath;
   productDetails: IProduct[];
-
+  productId: string = this.route.snapshot.paramMap.get('id');
+  
   constructor(private productService: ProductService, private route : ActivatedRoute) { }
-
+  
   ngOnInit(): void {
+    console.log(this.route.snapshot.paramMap.get('id'))
     this.getProductDetails()
   }
 
   getProductDetails = () => {
-    const res = this.productService.getProductDetails(this.route.snapshot.paramMap.get('id')).subscribe(data => {
+    const res = this.productService.getProductDetails(this.productId).subscribe(data => {
       this.productDetails = data;
     })
   }

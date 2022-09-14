@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductService } from 'src/services';
 import { IProduct } from 'src/models/product.model';
+import { basePath } from 'src/endpoints'
 
 @Component({
   selector: 'app-product-listing',
@@ -12,6 +13,7 @@ export class ProductListingComponent implements OnInit {
   @Input() category = ''
   @Input() type = ''
   @Input() numberOfRecords = ''
+  BASE_ROUTE = basePath
 
   productListing:IProduct[] = [];
 

@@ -25,13 +25,11 @@ export class AdminProductsComponent implements OnInit {
     });
   }
 
-  editProduct = (id) => {
-
-  }
-
   deleteProduct = (article_no) => {
     this.productService.deleteProduct(article_no).subscribe(res => {
-      console.log(res)
+      if(res.type === 'success'){
+        this.toastService.success('product deleted');
+      }
     })
   }
   

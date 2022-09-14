@@ -3,7 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { throwError, catchError, Observable } from 'rxjs';
 import { IProduct } from 'src/models/product.model';
 
-import { ADD_PRODUCT, DELETE_PRODUCT, GET_PRODUCTS, GET_PRODUCTS_LISTING, GET_PRODUCT_DETAILS, IMAGE_UPLOAD } from '../endpoints';
+import { ADD_PRODUCT, DELETE_PRODUCT, GET_PRODUCTS, GET_PRODUCTS_LISTING, GET_PRODUCT_DETAILS, IMAGE_UPLOAD, UPDATE_PRODUCT } from '../endpoints';
 
 @Injectable({ providedIn: 'root' })
 
@@ -50,13 +50,18 @@ export class ProductService {
     return res;
   }
 
-  getProductDetails = (id) => {
-    const res = this.http.get<IProduct[]>(`${GET_PRODUCT_DETAILS}/${id}`).pipe(catchError(this.handleError));
+  getProductDetails = (article_no) => {
+    const res = this.http.get<IProduct[]>(`${GET_PRODUCT_DETAILS}/${article_no}`).pipe(catchError(this.handleError));
     return res;
   }
 
   deleteProduct = (id) => {
     const res = this.http.delete<IProduct>(DELETE_PRODUCT+'/'+id).pipe(catchError(this.handleError));
+    return res;
+  }
+
+  updateProduct = (data) => {
+    const res = this.http.put<IProduct>(UPDATE_PRODUCT+'/'+data.id, data).pipe(catchError(this.handleError));
     return res;
   }
 }

@@ -12,7 +12,7 @@ import {
 const routes: Routes = [
   { path: 'login', component: AdminLoginComponent },
   { path: 'add-product', component: AddProductComponent },
-  { path: 'edit-product', component: EditProductComponent },
+  { path: 'edit-product/:id', component: EditProductComponent },
   { path: 'products', component: AdminProductsComponent },
   { path: 'create-admin-user', component: CreateAdminUserComponent },
 ];

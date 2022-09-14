@@ -7,13 +7,13 @@ import { SharedModule } from '../shared/shared.module';
 
 import {
   ProductDetailsComponent,
-  ProductListingComponent
+  ShopListingComponent
 } from './components';
 
 @NgModule({
   declarations: [
     ProductDetailsComponent,
-    ProductListingComponent
+    ShopListingComponent
   ],
   imports: [
     RouterModule,

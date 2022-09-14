@@ -5,11 +5,11 @@ import { ProductService } from 'src/services';
 import { basePath } from 'src/endpoints';
 
 @Component({
-  selector: 'app-product-listing',
-  templateUrl: './product-listing.component.html',
-  styleUrls: ['./product-listing.component.scss']
+  selector: 'app-shop-listing',
+  templateUrl: './shop-listing.component.html',
+  styleUrls: ['./shop-listing.component.scss']
 })
-export class ProductListingComponent implements OnInit {
+export class ShopListingComponent implements OnInit {
   category: string = 'men'
   type: string = 'jeans-pant'
   products: IProduct[];

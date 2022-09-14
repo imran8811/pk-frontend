@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 
 import {
   ProductDetailsComponent,
-  ProductListingComponent
+  ShopListingComponent
 } from './components';
 
 const routes: Routes = [
-  { path: '', component: ProductListingComponent },
+  { path: '', component: ShopListingComponent },
   { path: 'product-details/:id', component: ProductDetailsComponent },
 ];
 
