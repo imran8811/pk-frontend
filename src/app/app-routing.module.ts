@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent } from 'src/modules/static/components';
 
 const routes: Routes = [
   {
@@ -7,12 +8,8 @@ const routes: Routes = [
     loadChildren: () => import('../modules/static/static.module').then(module => module.StaticModule),
   },
   {
-    path: 'men',
-    loadChildren: () => import('../modules/men-landing-pages/men-landing-pages.module').then(module => module.MenLandingPagesModule),
-  },
-  {
-    path: 'women',
-    loadChildren: () => import('../modules/women-landing-pages/women-landing-pages.module').then(module => module.WomenLandingPagesModule),
+    path: 'posts',
+    loadChildren: () => import('../modules/posts/posts.module').then(module => module.PostsModule),
   },
   {
     path: 'admin',
@@ -21,6 +18,10 @@ const routes: Routes = [
   {
     path: 'wholesale-shop',
     loadChildren: () => import('../modules/shop/shop.module').then(module => module.ShopModule)
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ];
 

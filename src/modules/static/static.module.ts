@@ -12,7 +12,8 @@ import {
   ContactComponent,
   CertificationsComponent,
   BlogComponent,
-  BlogPostComponent
+  BlogPostComponent,
+  PageNotFoundComponent
 } from './components';
 
 @NgModule({
@@ -23,7 +24,8 @@ import {
     ContactComponent,
     CertificationsComponent,
     BlogComponent,
-    BlogPostComponent
+    BlogPostComponent,
+    PageNotFoundComponent
   ],
   imports: [
     RouterModule,

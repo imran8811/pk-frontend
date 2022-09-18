@@ -34,6 +34,14 @@ export function app(): express.Express {
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
+    if(req.originalUrl == '/jeans-pants/wholesale-jeans-bulk'){res.redirect(301, '/posts/wholesale-jeans-bulk')}
+    if(req.originalUrl == '/jeans-for-men'){res.redirect(301, '/wholesale-shop')}
+    if(req.originalUrl == '/jeans-pants/wholesale-jeans-suppliers'){res.redirect(301, '/posts/wholesale-jeans-suppliers')}
+    if(req.originalUrl == '/jeans-pants/wholesale-jeans-mens'){res.redirect(301, '/posts/wholesale-jeans-mens')}
+    if(req.originalUrl == '/jeans-pants/cheap-mens-jeans-wholesale'){res.redirect(301, '/posts/cheap-mens-jeans-wholesale')}
+    if(req.originalUrl == '/jeans-pants/jeans-supplier'){res.redirect(301, '/posts/jeans-supplier')}
+    if(req.originalUrl == '/jeans-pants/buy-jeans-in-bulk'){res.redirect(301, '/posts/buy-jeans-in-bulk')}
+    
     res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
   });
 

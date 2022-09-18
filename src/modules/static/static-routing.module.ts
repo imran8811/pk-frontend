@@ -7,7 +7,8 @@ import {
   ContactComponent,
   FactoryComponent,
   CertificationsComponent,
-  BlogComponent
+  BlogComponent,
+  PageNotFoundComponent
 } from './components';
 
 const routes: Routes = [
@@ -16,7 +17,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: 'factory', component: FactoryComponent},
   { path: 'certifications', component: CertificationsComponent},
-  { path: 'blog', component: BlogComponent}
+  { path: 'blog', component: BlogComponent},
 ];
 
 @NgModule({
