@@ -7,8 +7,8 @@
     <div class="col-lg-3 mb-3" *ngFor="let product of products">
       <a [routerLink]="['/wholesale-shop/product-details/', product.article_no]" class="d-block mb-3" target="_blank" rel="noreferrer">
         <img 
-          src="{{BASE_PATH+product.product_images?.path+'/'+product.product_images?.name}}"
-          alt={{product.product_images.path}}
+          src="{{BASE_PATH+product.product_images[0]?.path+'/'+product.product_images[0]?.name}}"
+          alt={{product.product_images[0]?.path}}
           height="370"/>
       </a>
       <a [routerLink]="['/wholesale-shop/product-details/', product.article_no]" class="d-block text-center">Article# {{product.article_no}}</a>

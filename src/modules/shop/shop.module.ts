@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShopRoutingModule } from './shop-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 import {
   ProductDetailsComponent,
@@ -21,7 +22,8 @@ import {
     FormsModule,
     ReactiveFormsModule,
     ShopRoutingModule,
-    SharedModule
+    SharedModule,
+    NgImageSliderModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

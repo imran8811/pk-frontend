@@ -24,7 +24,7 @@ export class ShopListingComponent implements OnInit {
   getProductsListing = () => {
     const res = this.productService.getAllProducts().subscribe(data => {
       this.products = data
-    })
+    });
   } 
 
 }

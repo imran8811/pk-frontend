@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ToastrModule } from 'ngx-toastr';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from 'src/modules/shared/shared.module';
@@ -9,6 +8,7 @@ import { MenLandingPagesModule } from 'src/modules/men-landing-pages/men-landing
 import { WomenLandingPagesModule } from 'src/modules/women-landing-pages/women-landing-pages.module';
 import { AuthInterceptor } from 'src/AuthInterceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -21,7 +21,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     SharedModule,
     MenLandingPagesModule,
     WomenLandingPagesModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    RouterModule
   ],
   providers : [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

@@ -20,8 +20,8 @@ export class AdminProductsComponent implements OnInit {
   }
 
   getProducts = () => {
-    this.productService.getAllProducts().subscribe(res => {
-      this.products = res;  
+    const res = this.productService.getAllProducts().subscribe(res => {
+      this.products = res;
     });
   }
 

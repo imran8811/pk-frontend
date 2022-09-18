@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { AdminService  } from 'src/services';
+import { AdminAuthService  } from 'src/services';
 
 @Component({
   selector: 'app-create-admin-user',
@@ -17,7 +17,7 @@ export class CreateAdminUserComponent implements OnInit {
     'password' : ['', Validators.required],
   })
 
-  constructor(private fb: FormBuilder, private router: Router, private adminService: AdminService) { }
+  constructor(private fb: FormBuilder, private router: Router, private adminAuthService: AdminAuthService) { }
 
   get form() { return this.createAdminUserForm.controls }
 
@@ -29,7 +29,7 @@ export class CreateAdminUserComponent implements OnInit {
       email : this.form['email'].value,
       password : this.form['password'].value
     }
-    const res = this.adminService.createAdminUser(data).subscribe(res => {
+    const res = this.adminAuthService.createAdminUser(data).subscribe(res => {
       if(res.type === 'success'){
         // const adminData = {
         //   'token' : res.token,

@@ -1,8 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Inject, PLATFORM_ID } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 
-import { AdminService  } from 'src/services';
+import { AdminAuthService  } from 'src/services';
 
 @Component({
   selector: 'app-admin-login',
@@ -16,7 +17,11 @@ export class AdminLoginComponent implements OnInit {
     'password' : ['', Validators.required],
   })
 
-  constructor(private fb: FormBuilder, private router: Router, private adminService: AdminService) { }
+  constructor(
+    private fb: FormBuilder, 
+    private router: Router, 
+    private adminAuthService: AdminAuthService,
+    ) { }
 
   get form() { return this.adminLoginForm.controls }
 
@@ -27,11 +32,11 @@ export class AdminLoginComponent implements OnInit {
       email : this.form['email'].value,
       password : this.form['password'].value
     }
-    const res = this.adminService.adminLogin(data).subscribe(res => {
-      if(res.type === 'success'){
+    const res = this.adminAuthService.adminLogin(data).subscribe(res => {
+      if(res?.type === 'success'){
         const userData = {
-          'token' : res.token,
-          'name' : res.user.name
+          token : res.token,
+          name : res.user.name
         }
         localStorage.setItem('userData', JSON.stringify(userData))
         this.router.navigate(['/admin/add-product'])

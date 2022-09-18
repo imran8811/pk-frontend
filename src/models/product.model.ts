@@ -1,3 +1,4 @@
+import { IProductImages } from "./productImages.model";
 export interface IProduct {
   sizes : string,
   colors : string,
@@ -12,4 +13,5 @@ export interface IProduct {
   type : string,
   length : string,
   slug : string,
+  product_images : IProductImages[]
 }
