@@ -5,6 +5,7 @@ import {ngExpressEngine} from '@nguniversal/express-engine';
 import * as express from 'express';
 import {existsSync} from 'fs';
 import {join} from 'path';
+import { forcedomain } from 'express-force-domain';
 
 import 'localstorage-polyfill'
 global['localStorage'] = localStorage;
@@ -34,6 +35,10 @@ export function app(): express.Express {
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
+    var host = req.header("host");
+    if (!host.match(/^www\..*/i)) {
+      res.redirect(301, "https://www." + host + req.url);
+    }
     if(req.originalUrl == '/jeans-pants/wholesale-jeans-bulk'){res.redirect(301, '/posts/wholesale-jeans-bulk')}
     if(req.originalUrl == '/jeans-for-men'){res.redirect(301, '/wholesale-shop')}
     if(req.originalUrl == '/jeans-pants/wholesale-jeans-suppliers'){res.redirect(301, '/posts/wholesale-jeans-suppliers')}
@@ -69,6 +74,7 @@ function run(): void {
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
 }
+
 
 // Webpack will replace 'require' with '__webpack_require__'
 // '__non_webpack_require__' is a proxy to Node 'require'

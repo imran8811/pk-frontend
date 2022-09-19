@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+  mainMenu: boolean = true;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleMenu = () => {
+    this.mainMenu = !this.mainMenu
   }
 
 }

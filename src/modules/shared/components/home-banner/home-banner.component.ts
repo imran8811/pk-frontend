@@ -11,10 +11,25 @@ SwiperCore.use([Pagination, Navigation]);
 
 export class HomeBannerComponent implements OnInit {
 
+  public swiperConfig = {
+    slidesPerView: 1,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false
+    },
+    breakpoints:{
+       640:{
+            slidesPerView: 1, 
+           }
+    }
+};
+
   constructor() { }
 
   ngOnInit(): void {
     
   }
+
+  
 
 }

@@ -1,5 +1,6 @@
 <nav class="main-menu">
-  <ul>
+  <i class="menu-icon" (click)="toggleMenu()">Menu</i>
+  <ul *ngIf="mainMenu">
     <li><a routerLink="/wholesale-shop">Wholesale Shop</a></li>
     <li><a routerLink="/about">About us</a></li>
     <li><a routerLink="/factory">Factory</a></li>

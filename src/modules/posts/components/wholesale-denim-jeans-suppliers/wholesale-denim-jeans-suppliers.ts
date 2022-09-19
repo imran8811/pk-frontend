@@ -8,8 +8,8 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 
 export class WholesaleDenimJeansSuppliersComponent implements OnInit {
-  headingText = 'Jeans Wholesale'
-  paraText = 'Best Jeans Wholesale'
+  headingText = 'Wholesale Denim Jeans Suppliers'
+  paraText = 'Best Wholesale Denim Jeans Suppliers'
   category = 'men'
   type = 'jeans-pant'
   numberOfRecords = '6'
@@ -17,9 +17,9 @@ export class WholesaleDenimJeansSuppliersComponent implements OnInit {
   constructor(private title: Title, private meta: Meta) { }
 
   ngOnInit(): void {
-    this.title.setTitle('About - Wholesale Jeans, Jeans Wholesalers, Wholesale Denim Pants')
+    this.title.setTitle('Wholesale Denim Jeans Suppliers')
     this.meta.addTags([
-      {name: 'keywords', content: 'Wholesale Jeans, Jeans Wholesalers, Wholesale Denim Pants'},
+      {name: 'keywords', content: 'Wholesale Denim Jeans Suppliers'},
       {name: 'description', content: 'PK Apparel Specializes in jeans pants manufacturing and wholesale, jeans Jackets wholesale, Jeans Shirt and all other denim products. We stand behind all of the products that we handle and we are the company that stand behind the quality and performance of the products they build'},
     ])
   }

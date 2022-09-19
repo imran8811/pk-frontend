@@ -12,7 +12,6 @@ import {
   ContactComponent,
   CertificationsComponent,
   BlogComponent,
-  BlogPostComponent,
   PageNotFoundComponent
 } from './components';
 
@@ -24,7 +23,6 @@ import {
     ContactComponent,
     CertificationsComponent,
     BlogComponent,
-    BlogPostComponent,
     PageNotFoundComponent
   ],
   imports: [

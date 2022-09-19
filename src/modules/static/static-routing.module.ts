@@ -8,7 +8,6 @@ import {
   FactoryComponent,
   CertificationsComponent,
   BlogComponent,
-  PageNotFoundComponent
 } from './components';
 
 const routes: Routes = [
