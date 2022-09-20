@@ -7,7 +7,8 @@ import { SwiperModule } from 'swiper/angular';
 import {
   HeaderComponent,
   FooterComponent, 
-  NavComponent,
+  NavHeaderComponent,
+  NavFooterComponent,
   HomeBannerComponent,
   RatingReviewsComponent,
   FAQsComponent,
@@ -21,7 +22,8 @@ import {
   declarations: [
     HeaderComponent,
     FooterComponent,
-    NavComponent,
+    NavHeaderComponent,
+    NavFooterComponent,
     HomeBannerComponent,
     RatingReviewsComponent,
     FAQsComponent,
@@ -33,7 +35,8 @@ import {
   exports :[
     HeaderComponent,
     FooterComponent,
-    NavComponent,
+    NavHeaderComponent,
+    NavFooterComponent,
     HomeBannerComponent,
     RatingReviewsComponent,
     FAQsComponent,
