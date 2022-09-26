@@ -1,7 +1,7 @@
 // const baseRoute = 'http://localhost:8000';
 const baseRoute = 'https://www.pkapparel.com/api';
 
-// export const basePath = 'http://localhost:8000';
+// export const basePath = 'http://localhost:4200';
 export const basePath = 'https://www.pkapparel.com';
 export const ADMIN_LOGIN = `${baseRoute}/admin/login`;
 export const ADD_PRODUCT = `${baseRoute}/admin/product/new`;

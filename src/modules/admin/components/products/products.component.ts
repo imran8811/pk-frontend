@@ -1,8 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IProduct } from 'src/models/product.model';
 
-import { ProductService  } from 'src/services';
+import { ProductService, GlobalService  } from 'src/services';
 import { ToastrService } from 'ngx-toastr';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -13,7 +14,7 @@ import { ToastrService } from 'ngx-toastr';
 export class AdminProductsComponent implements OnInit {
   products: IProduct[];
 
-  constructor(private productService: ProductService, private toastService: ToastrService) { }
+  constructor(private globalService: GlobalService, private productService: ProductService) { }
 
   ngOnInit(): void {
     this.getProducts()
@@ -28,8 +29,7 @@ export class AdminProductsComponent implements OnInit {
   deleteProduct = (article_no) => {
     this.productService.deleteProduct(article_no).subscribe(res => {
       if(res.type === 'success'){
-        this.toastService.success('product deleted');
-      }
+        this.globalService.reloadCurrentRoute();      }
     })
   }
   
