@@ -27,6 +27,7 @@
     "express": "^4.15.2",
     "express-force-domain": "^0.0.6",
     "localstorage-polyfill": "^1.0.1",
+    "lodash": "^4.17.21",
     "ng-image-slider": "^6.0.0",
     "ngx-toastr": "^15.0.0",
     "rxjs": "~7.5.0",

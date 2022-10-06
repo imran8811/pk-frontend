@@ -5,7 +5,7 @@
       <span class="text-capitalize">{{category}}</span> Hot Selling <span class="text-capitalize">{{type}}</span>
     </h2>
     <div class="product-filters mb-4">
-      <form [formGroup]="productFilters" class="row">
+      <form [formGroup]="shopFilters" class="row">
         <div class="col-lg-3">
           <label for="category">Category:</label>
           <select class="select-input" id="category" formControlName="category">
@@ -27,7 +27,7 @@
         </div>
       </form>
     </div>
-    <div class="col-lg-3 mb-3" *ngFor="let product of products | sortBy : 'desc'">
+    <div class="col-lg-3 mb-5" *ngFor="let product of products | sortBy : 'desc'">
       <a [routerLink]="['/wholesale-shop/product-details/', product.article_no]" class="d-block mb-3" target="_blank" rel="noreferrer">
         <img 
           src="{{BASE_PATH+product.product_images[0]?.path+'/'+product.product_images[0]?.name}}"

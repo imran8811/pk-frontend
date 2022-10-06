@@ -5,7 +5,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShopRoutingModule } from './shop-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { NgImageSliderModule } from 'ng-image-slider';
-import { SortByPipe } from 'src/pipes/sortBy.pipe';
 
 import {
   ProductDetailsComponent,
@@ -16,7 +15,6 @@ import {
   declarations: [
     ProductDetailsComponent,
     ShopListingComponent,
-    SortByPipe
   ],
   imports: [
     RouterModule,
@@ -27,7 +25,6 @@ import {
     SharedModule,
     NgImageSliderModule
   ],
-  providers: [SortByPipe],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 

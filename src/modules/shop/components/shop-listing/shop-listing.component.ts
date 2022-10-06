@@ -17,7 +17,7 @@ export class ShopListingComponent implements OnInit {
   products: IProduct[];
   BASE_PATH = basePath;
   loader:boolean = false;
-  productFilters: FormGroup;
+  shopFilters: FormGroup;
 
   constructor(private fb: FormBuilder, private productService: ProductService, private title: Title, private meta: Meta) { }
 
@@ -29,7 +29,7 @@ export class ShopListingComponent implements OnInit {
       {name: 'keywords', content: 'Jeans Wholesale Shop, Jeans Pants Wholesale Shop'},
       {name: 'description', content: 'PK Apparel Specializes in jeans pants manufacturing and wholesale, jeans Jackets wholesale, Jeans Shirt and all other denim products. We stand behind all of the products that we handle and we are the company that stand behind the quality and performance of the products they build'},
     ])
-    this.productFilters = this.fb.group({
+    this.shopFilters = this.fb.group({
       category : ["men", Validators.required],
       type : ["jeans-pants", Validators.required]
     })
