@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AdminRoutingModule } from './admin-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { RemoveDashPipe } from 'src/pipes/remove-dash';
 
 import {
   AddProductComponent,
@@ -23,7 +22,6 @@ import {
     AdminProductsComponent,
     CreateAdminUserComponent,
     EditProductComponent,
-    RemoveDashPipe
   ],
   imports: [
     CommonModule,
@@ -31,9 +29,6 @@ import {
     SharedModule,
     HttpClientModule,
     ReactiveFormsModule,
-  ],
-  providers: [
-    RemoveDashPipe
   ]
 })
 

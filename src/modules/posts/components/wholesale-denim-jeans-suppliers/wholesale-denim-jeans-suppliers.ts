@@ -12,7 +12,6 @@ export class WholesaleDenimJeansSuppliersComponent implements OnInit {
   paraText = 'Best Wholesale Denim Jeans Suppliers'
   category = 'men'
   type = 'jeans-pant'
-  numberOfRecords = '6'
 
   constructor(private title: Title, private meta: Meta) { }
 

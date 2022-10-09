@@ -12,7 +12,6 @@ export class BulkJeansComponent implements OnInit {
   paraText = 'Best Bulk Jeans'  
   category = 'men'  
   type = 'jeans-pant'  
-  numberOfRecords = '6' 
 
   constructor(private title: Title, private meta: Meta) { }
 

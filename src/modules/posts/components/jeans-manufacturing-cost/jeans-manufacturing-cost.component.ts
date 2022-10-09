@@ -11,8 +11,7 @@ export class JeansManufacturingCostComponent implements OnInit {
   headingText = 'Jeans Manufacturing Cost'
   paraText = 'Best Jeans Manufacturing Cost'
   category = 'men'  
-  type = 'jeans-pant'  
-  numberOfRecords = '6' 
+  type = 'jeans-pant'   
 
   constructor(private title: Title, private meta: Meta) { }
 

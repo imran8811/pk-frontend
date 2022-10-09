@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SwiperModule } from 'swiper/angular';
-import { SortByPipe } from 'src/pipes/sortBy.pipe';
+import { SortByPipe, RemoveDashPipe } from 'src/pipes';
 
 import {
   HeaderComponent,
@@ -32,7 +32,8 @@ import {
     ProductFiltersComponent,
     ProductListingComponent,
     TaglineComponent,
-    SortByPipe
+    SortByPipe,
+    RemoveDashPipe
   ],
   exports :[
     HeaderComponent,
@@ -46,7 +47,8 @@ import {
     ProductFiltersComponent,
     ProductListingComponent,
     TaglineComponent,
-    SortByPipe
+    SortByPipe,
+    RemoveDashPipe
   ],
   imports: [
     RouterModule,
@@ -56,7 +58,8 @@ import {
     SwiperModule
   ],
   providers: [
-    SortByPipe
+    SortByPipe,
+    RemoveDashPipe
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

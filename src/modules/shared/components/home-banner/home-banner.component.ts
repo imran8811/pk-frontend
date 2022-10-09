@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import SwiperCore, { Navigation, Pagination } from 'swiper';
+import SwiperCore, { Navigation, Pagination, SwiperOptions } from 'swiper';
 SwiperCore.use([Pagination, Navigation]);
 
 @Component({
@@ -11,25 +11,21 @@ SwiperCore.use([Pagination, Navigation]);
 
 export class HomeBannerComponent implements OnInit {
 
-  public swiperConfig = {
+  swiperConfig: SwiperOptions = {
     slidesPerView: 1,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false
     },
     breakpoints:{
-       640:{
-            slidesPerView: 1, 
-           }
+      640:{
+        slidesPerView: 1, 
+      }
     }
-};
+  };
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-    
-  }
-
-  
+  ngOnInit(): void {}
 
 }

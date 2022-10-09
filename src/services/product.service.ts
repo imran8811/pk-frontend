@@ -11,8 +11,8 @@ export class ProductService {
 
   constructor(private http: HttpClient) { }
 
-  getTopProducts = (category:any, type:any, numberOfRecords:any) => {
-    const res = this.http.get<IProduct[]>(`${GET_PRODUCTS_LISTING}?category=${category}&type=${type}&numberOfRecords=${numberOfRecords}`)
+  getTopProducts = (category:any, type:any) => {
+    const res = this.http.get<IProduct[]>(`${GET_PRODUCTS_LISTING}?category=${category}&type=${type}&numberOfRecords=8`)
       .pipe()
     return res;
   }

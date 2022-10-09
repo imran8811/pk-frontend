@@ -12,7 +12,6 @@ import { basePath } from 'src/endpoints'
 export class ProductListingComponent implements OnInit {
   @Input() category = ''
   @Input() type = ''
-  @Input() numberOfRecords = ''
   BASE_ROUTE = basePath
 
   productListing:IProduct[] = [];
@@ -24,7 +23,7 @@ export class ProductListingComponent implements OnInit {
   }
 
   getTopProducts = () => {
-    this.productService.getTopProducts('men', 'jeans-pant', '6').subscribe(res => {
+    this.productService.getTopProducts(this.category, this.type).subscribe(res => {
       this.productListing = res;
     })
   }

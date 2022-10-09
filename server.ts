@@ -5,7 +5,6 @@ import {ngExpressEngine} from '@nguniversal/express-engine';
 import * as express from 'express';
 import {existsSync} from 'fs';
 import {join} from 'path';
-import { forcedomain } from 'express-force-domain';
 
 import 'localstorage-polyfill'
 global['localStorage'] = localStorage;
@@ -46,6 +45,8 @@ export function app(): express.Express {
     if(req.originalUrl == '/jeans-pants/cheap-mens-jeans-wholesale'){res.redirect(301, '/posts/cheap-mens-jeans-wholesale')}
     if(req.originalUrl == '/jeans-pants/jeans-supplier'){res.redirect(301, '/posts/jeans-supplier')}
     if(req.originalUrl == '/jeans-pants/buy-jeans-in-bulk'){res.redirect(301, '/posts/buy-jeans-in-bulk')}
+    if(req.originalUrl == '/men/jeans-pants'){res.redirect(301, '/wholesale-shop')}
+    if(req.originalUrl == '/women/jeans-pants'){res.redirect(301, '/wholesale-shop')}
     
     res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
   });
