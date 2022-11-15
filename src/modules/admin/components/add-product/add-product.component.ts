@@ -17,6 +17,8 @@ export class AddProductComponent implements OnInit {
   imgFile = '';
   files;
   selectedFile: File;
+  imageUploadedSuccess:boolean = false;
+  imageUploadedError:boolean = false;
 
   imageUploadForm = this.fb.group({
     'article_no' : ['', Validators.required],
@@ -46,13 +48,23 @@ export class AddProductComponent implements OnInit {
   ngOnInit(): void {}
 
   fileOnChange = (e) => {
-    const formData = new FormData()
-    const files = e.target.files;
-    for (let i = 0; i < files.length; i++) {
-      formData.append(`product_images[${i}]`, files[i])
+    if(e.target.files.length > 0) {
+      this.imageUploadedSuccess = false;
+      this.imageUploadedError = false;
+      const formData = new FormData()
+      const files = e.target.files;
+      for (let i = 0; i < files.length; i++) {
+        formData.append(`product_images[${i}]`, files[i])
+      }
+      formData.append('article_no', this.form['article_no'].value)
+      this.productService.productImageUpload(formData).subscribe((data) => {
+        console.log(data);
+        if(data.type === 'success'){
+          this.imageUploadedSuccess = true;
+          this.imageUploadedError = false;
+        }
+      })
     }
-    formData.append('article_no', this.form['article_no'].value)
-    const res = this.productService.productImageUpload(formData).subscribe(data => data)
   } 
 
   onSubmit = () => {

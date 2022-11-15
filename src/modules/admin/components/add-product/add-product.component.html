@@ -12,6 +12,8 @@
           <div class='col-lg-4'>
             <label for='product-files'>Product Files</label>
             <input type="file" id='product-files' (change)="fileOnChange($event)" class="form-control" multiple />
+            <p class="text-success" *ngIf="imageUploadedSuccess">Image Uploaded Successfully</p>
+            <p class="text-danger" *ngIf="imageUploadedError">Image Uploading Error</p>
           </div>
           <div class='col-4'>
             <label for='category'>Category</label>

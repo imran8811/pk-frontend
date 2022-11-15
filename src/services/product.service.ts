@@ -4,6 +4,7 @@ import { throwError, catchError, tap } from 'rxjs';
 import { IProduct } from 'src/models/product.model';
 
 import { ADD_PRODUCT, DELETE_PRODUCT, GET_PRODUCTS, GET_PRODUCTS_LISTING, GET_PRODUCT_DETAILS, IMAGE_UPLOAD, UPDATE_PRODUCT } from '../endpoints';
+import { IProductImages } from 'src/models';
 
 @Injectable({ providedIn: 'root' })
 
@@ -18,7 +19,7 @@ export class ProductService {
   }
 
   productImageUpload = (data) => {
-    const res = this.http.post(IMAGE_UPLOAD, data);
+    const res = this.http.post<IProductImages>(IMAGE_UPLOAD, data);
     return res;
   }
 
